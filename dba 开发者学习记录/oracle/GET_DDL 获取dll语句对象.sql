@@ -1,0 +1,5 @@
+SELECT DBMS_METADATA.GET_DDL(U.OBJECT_TYPE, U.object_name), U.OBJECT_TYPE ,u.object_name
+FROM USER_OBJECTS U 
+where U.OBJECT_TYPE in( 'TABLE' ,  'VIEW',  'INDEX'   , 'PROCEDURE'   , 'SEQUENCE'  , 'TRIGGER' )
+order by U.OBJECT_TYPE desc  
+;
