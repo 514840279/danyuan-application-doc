@@ -32,3 +32,20 @@ https://github.com/danyuan-danyuan/danyuan-application
        2. 执行 start/start-all.bat 
 
 访问 http://localhost
+
+# 博客搭建
+cnpm install hexo-cli -g
+mkdir blog
+cd blog
+hexo init
+cnpm audit fix --force
+hexo s
+
+git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia
+
+cnpm i hexo-generator-json-content --save
+
+cnpm install hexo-deployer-git --save
+
+hexo clean
+hexo deploy
